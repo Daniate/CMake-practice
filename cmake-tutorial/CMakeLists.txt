@@ -15,7 +15,7 @@ configure_file(
 )
 
 # 将目录添加到搜索路径中，以找到 TutorialConfig.h 头文件
-include_directories("${PROJECT_BINARY_DIR}")
+include_directories("${PROJECT_SOURCE_DIR}")
 
 # 是否添加 MathFunctions 库
 if(USE_MYMATH)
@@ -27,3 +27,23 @@ endif(USE_MYMATH)
 add_executable(Tutorial tutorial.cpp)
 
 target_link_libraries(Tutorial ${EXTRA_LIBS})
+
+install(TARGETS Tutorial DESTINATION bin)
+install(FILES "${PROJECT_SOURCE_DIR}/TutorialConfig.h" DESTINATION include)
+
+include(CTest)
+
+# 程序是否可以运行
+add_test(TutorialRuns Tutorial 25)
+# 25的平方根
+add_test(TutorialComp25 Tutorial 25)
+set_tests_properties (TutorialComp25 PROPERTIES PASS_REGULAR_EXPRESSION "25.000000 is 5.000000")
+# 处理负数
+add_test(TutorialNegative Tutorial -25)
+set_tests_properties(TutorialNegative PROPERTIES PASS_REGULAR_EXPRESSION "-25.000000 is 0.000000")
+# 处理小数
+add_test(TutorialSmall Tutorial 0.0001)
+set_tests_properties(TutorialSmall PROPERTIES PASS_REGULAR_EXPRESSION "0.000100 is 0.010000")
+# 提示如何使用该程序的信息，是否有效
+add_test(TutorialUsage Tutorial)
+set_tests_properties(TutorialUsage PROPERTIES PASS_REGULAR_EXPRESSION "Usage:.*number")
