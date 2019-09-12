@@ -1,0 +1,10 @@
+/**
+ * 配置选项及设置
+ * 
+ * @Tutorial_VERSION_MAJOR@ 及 @Tutorial_VERSION_MINOR@，
+ * 将会被 CMakeLists.txt 中的内容替换掉。
+ * 
+ * 该文件(TutorialConfig.h.in)的内容将会被写入到对应的头文件中。
+ */
+#define Tutorial_VERSION_MAJOR @Tutorial_VERSION_MAJOR@
+#define Tutorial_VERSION_MINOR @Tutorial_VERSION_MINOR@
