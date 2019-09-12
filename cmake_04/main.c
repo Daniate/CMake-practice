@@ -4,9 +4,9 @@
 #include <stdlib.h>
 
 #ifdef USE_MY_MATH
-#include "math/my_math.h"
+    #include "math/my_math.h"
 #else
-#include <math.h>
+    #include <math.h>
 #endif
 
 int main(int argc, const char *argv[]) {
