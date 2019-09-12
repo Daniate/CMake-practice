@@ -5,6 +5,10 @@ project(Tutorial VERSION 0.1.0)
 set(Tutorial_VERSION_MAJOR 1)
 set(Tutorial_VERSION_MINOR 0)
 
+include(CheckFunctionExists)
+check_function_exists(log EXISTS_LOG)
+check_function_exists(exp EXISTS_EXP)
+
 # 是否使用自己的数学函数
 option(USE_MYMATH "Use tutorial provided math implementation" ON)
 

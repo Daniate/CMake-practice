@@ -10,3 +10,6 @@
 #define Tutorial_VERSION_MINOR 0
 
 #define USE_MYMATH
+
+#define EXISTS_LOG
+#define EXISTS_EXP
