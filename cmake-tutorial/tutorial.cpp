@@ -14,8 +14,10 @@ int main(int argc, const char *argv[]) {
     }
     double inputValue = atof(argv[1]);
 #ifdef USE_MYMATH
+    fprintf(stdout, "Using custom sqrt function.\n");
     double outputValue = mysqrt(inputValue);
 #else
+    fprintf(stdout, "Using sqrt function in math library.\n");
     double outputValue = sqrt(inputValue);
 #endif // USE_MYMATH
     

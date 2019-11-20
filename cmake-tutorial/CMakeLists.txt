@@ -9,6 +9,9 @@ include(CheckFunctionExists)
 check_function_exists(log EXISTS_LOG)
 check_function_exists(exp EXISTS_EXP)
 
+message("\${EXISTS_LOG} is ${EXISTS_LOG}")
+message("\${EXISTS_EXP} is ${EXISTS_EXP}")
+
 # 是否使用自己的数学函数
 option(USE_MYMATH "Use tutorial provided math implementation" ON)
 
