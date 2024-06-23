@@ -2,8 +2,8 @@
     "version": 8,
     "configurePresets": [
         {
-            "name": "VS2019_x64_Debug",
-            "displayName": "Visual Studio Community 2019 - amd64 - Debug",
+            "name": "MSVC2019-x64",
+            "displayName": "MSVC2019-x64",
             "description": "将编译器用于 Visual Studio 16 2019 (x64 体系结构)",
             "generator": "Visual Studio 16 2019",
             "toolset": "host=x64",
@@ -12,188 +12,22 @@
             "cacheVariables": {
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
                 "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
-        },
-        {
-            "name": "VS2019_x64_Release",
-            "displayName": "Visual Studio Community 2019 - amd64 - Release",
-            "description": "将编译器用于 Visual Studio 16 2019 (x64 体系结构)",
-            "generator": "Visual Studio 16 2019",
-            "toolset": "host=x64",
-            "architecture": "x64",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_BUILD_TYPE": "Release"
-            }
-        },
-        {
-            "name": "VS2019_x64_RelWithDebInfo",
-            "displayName": "Visual Studio Community 2019 - amd64 - RelWithDebInfo",
-            "description": "将编译器用于 Visual Studio 16 2019 (x64 体系结构)",
-            "generator": "Visual Studio 16 2019",
-            "toolset": "host=x64",
-            "architecture": "x64",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_BUILD_TYPE": "RelWithDebInfo"
-            }
-        },
-        {
-            "name": "VS2019_x64_MinSizeRel",
-            "displayName": "Visual Studio Community 2019 - amd64 - MinSizeRel",
-            "description": "将编译器用于 Visual Studio 16 2019 (x64 体系结构)",
-            "generator": "Visual Studio 16 2019",
-            "toolset": "host=x64",
-            "architecture": "x64",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_BUILD_TYPE": "MinSizeRel"
-            }
-        },
-        {
-            "name": "VS2019_x86_Debug",
-            "displayName": "Visual Studio Community 2019 - x86 - Debug",
-            "description": "将编译器用于 Visual Studio 16 2019 (x86 体系结构)",
-            "generator": "Visual Studio 16 2019",
-            "toolset": "host=x86",
-            "architecture": "win32",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
-        },
-        {
-            "name": "VS2019_x86_Release",
-            "displayName": "Visual Studio Community 2019 - x86 - Release",
-            "description": "将编译器用于 Visual Studio 16 2019 (x86 体系结构)",
-            "generator": "Visual Studio 16 2019",
-            "toolset": "host=x86",
-            "architecture": "win32",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_BUILD_TYPE": "Release"
-            }
-        },
-        {
-            "name": "VS2019_x86_RelWithDebInfo",
-            "displayName": "Visual Studio Community 2019 - x86 - RelWithDebInfo",
-            "description": "将编译器用于 Visual Studio 16 2019 (x86 体系结构)",
-            "generator": "Visual Studio 16 2019",
-            "toolset": "host=x86",
-            "architecture": "win32",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_BUILD_TYPE": "RelWithDebInfo"
-            }
-        },
-        {
-            "name": "VS2019_x86_MinSizeRel",
-            "displayName": "Visual Studio Community 2019 - x86 - MinSizeRel",
-            "description": "将编译器用于 Visual Studio 16 2019 (x86 体系结构)",
-            "generator": "Visual Studio 16 2019",
-            "toolset": "host=x86",
-            "architecture": "win32",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "cl.exe",
-                "CMAKE_CXX_COMPILER": "cl.exe",
-                "CMAKE_BUILD_TYPE": "MinSizeRel"
-            }
-        },
-        {
-            "name": "Linux_GCC_x86_64_Debug",
-            "displayName": "Linux_GCC_x86_64_Debug",
-            "description": "使用编译器: C = /usr/bin/gcc, CXX = /usr/bin/g++",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "/usr/bin/gcc",
-                "CMAKE_CXX_COMPILER": "/usr/bin/g++",
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
-        },
-        {
-            "name": "Linux_GCC_x86_64_Release",
-            "displayName": "Linux_GCC_x86_64_Release",
-            "description": "使用编译器: C = /usr/bin/gcc, CXX = /usr/bin/g++",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "/usr/bin/gcc",
-                "CMAKE_CXX_COMPILER": "/usr/bin/g++",
-                "CMAKE_BUILD_TYPE": "Release"
-            }
-        },
-        {
-            "name": "Linux_GCC_x86_64_RelWithDebInfo",
-            "displayName": "Linux_GCC_x86_64_RelWithDebInfo",
-            "description": "使用编译器: C = /usr/bin/gcc, CXX = /usr/bin/g++",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "/usr/bin/gcc",
-                "CMAKE_CXX_COMPILER": "/usr/bin/g++",
-                "CMAKE_BUILD_TYPE": "RelWithDebInfo"
-            }
-        },
-        {
-            "name": "Linux_GCC_x86_64_MinSizeRel",
-            "displayName": "Linux_GCC_x86_64_MinSizeRel",
-            "description": "使用编译器: C = /usr/bin/gcc, CXX = /usr/bin/g++",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "/usr/bin/gcc",
-                "CMAKE_CXX_COMPILER": "/usr/bin/g++",
-                "CMAKE_BUILD_TYPE": "MinSizeRel"
-            }
-        },
-        {
-            "name": "aarch64-linux_Debug",
-            "displayName": "aarch64-linux_Debug",
-            "description": "使用编译器: C = /home/daniate/__work__/host/bin/aarch64-linux-gcc, CXX = /home/daniate/__work__/host/bin/aarch64-linux-g++",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "/home/daniate/__work__/host/bin/aarch64-linux-gcc",
-                "CMAKE_CXX_COMPILER": "/home/daniate/__work__/host/bin/aarch64-linux-g++",
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
-        },
-        {
-            "name": "aarch64-linux_Release",
-            "displayName": "aarch64-linux_Release",
-            "description": "使用编译器: C = /home/daniate/__work__/host/bin/aarch64-linux-gcc, CXX = /home/daniate/__work__/host/bin/aarch64-linux-g++",
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "cacheVariables": {
-                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "/home/daniate/__work__/host/bin/aarch64-linux-gcc",
-                "CMAKE_CXX_COMPILER": "/home/daniate/__work__/host/bin/aarch64-linux-g++",
-                "CMAKE_BUILD_TYPE": "Release"
+                "CMAKE_CXX_COMPILER": "cl.exe"
             }
         }
     ],
     "buildPresets": [
+        {
+            "name": "MSVC2019-x64-debug",
+            "displayName": "Visual Studio 生成工具 2019 - amd64 - Debug",
+            "configurePreset": "MSVC2019-x64",
+            "configuration": "Debug"
+        },
+        {
+            "name": "MSVC2019-x64-release",
+            "displayName": "Visual Studio 生成工具 2019 - amd64 - Release",
+            "configurePreset": "MSVC2019-x64",
+            "configuration": "Release"
+        }
     ]
 }
